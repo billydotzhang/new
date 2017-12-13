@@ -1,0 +1,91 @@
+@import "mixin/_common";
+@import "mixin/_template";
+
+@import "mixin/_nav";
+
+.loginBox{
+  background-color: $debgCrf5;
+  height: 100%;
+}
+.loginTab{
+  padding: 0.5rem 0.8rem 0 0.8rem;
+  @include display-flex;
+  background-color: $defCrFF;
+  box-shadow: 0.1rem 0.1rem 0.2rem #ccc;
+  .tabAct{
+    a{
+      border-bottom: 3px solid $mainCr;
+    }
+  }
+  .defTab{
+    width: 50%;
+    padding: 1rem 1rem 0 1rem;
+    text-align: center;
+    a{
+      display: inline-block;
+      line-height: 1.2rem;
+      text-align: center;
+    }
+  }
+}
+.loginFrom{
+  padding: 2rem .8rem;
+}
+.fromInAct{
+  input{
+    border: 1px solid $mainCr !important;
+  }
+}
+.fromInput{
+  padding: 0.3rem 0;
+  width: 100%;
+  input{
+    width: 95%;
+    border: 1px solid $bdrInCre6;
+    height: 2rem;
+    border-radius: $bdRadius;
+    font-size: 0.6rem;
+    padding: 0 0.3rem;
+    font-style: oblique;
+  }
+}
+.loginBtn{
+  margin-top: 1.7rem;
+  width: 100%;
+  color: $defCrFF;
+  line-height: 2rem;
+  background-color: $mainCr;
+  border: 1px solid $btnCr;
+  border-radius: $bdRadius;
+  font-size: $defFSze + 0.2rem;
+  font-weight: 300;
+}
+.loginBottom{
+  margin-top: 1rem;
+  @include display-flex;
+  @include justify-content(space-between);
+  a{
+    color: $fontCr8f;
+    &:last-child{
+      text-decoration:underline;
+    }
+  }
+}
+
+.weLogin{
+  padding-top: 2rem;
+  @extend .disFlexC;
+  .weBox{
+    text-align: center;
+    i{
+      font-size: 2rem;
+      color: #09bb07;
+    }
+    span{
+      display: block;
+      color: $fontCr8f;
+      padding-top: 0.3rem;
+      font-size: 0.2rem;
+    }
+  }
+}

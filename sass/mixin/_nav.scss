@@ -1,0 +1,36 @@
+@import "compass/css3";
+@import "template";
+
+.disFlexC{
+  @include display-flex;
+  @include justify-content(center);
+  @include align-items(center);
+}
+
+.navBox{
+  @include display-flex;
+  background-color: $defCrFF;
+  font-size: $defFSze;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  line-height: $navLht;
+  .navLt{
+    width: 20%;
+    @extend .disFlexC;
+  }
+  .navMid{
+    width: 100%;
+    text-align: center;
+    @extend .disFlexC;
+  }
+  .navRt{
+    width: 20%;
+    @extend .disFlexC;
+  }
+  .navLt{
+    i{
+      font-size: 1.2rem;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>登录</title>
+    <link href="./css/login.css" rel="stylesheet" />
+    <link href="//at.alicdn.com/t/font_506966_fd2t2mer3nixusor.css" rel="stylesheet">
+</head>
+<body>
+    <div class="navBox">
+        <a href="javascript:;" class="navLt">
+            <i class="iconfont icon-zuojian"></i>
+        </a>
+        <div class="navMid">
+            <span>登录</span>
+        </div>
+        <a class="navRt">
+        </a>
+    </div>
+
+    <div class="loginBox">
+        <div class="layer2rm"></div>
+        <div class="loginTab">
+            <div class="defTab ">
+                <a href="javascript:;">密码登录</a>
+            </div>
+            <div class="defTab tabAct">
+                <a href="javascript:;">验证码登录</a>
+            </div>
+        </div>
+
+        <div class="loginFrom">
+
+            <div class="fromInput ">
+                <input type="text" atatype="s5-16" errormsg="昵称至少5个字符,最多16个字符！" placeholder="请输入手机号">
+            </div>
+
+
+            <input type="button" class="loginBtn" value="登录">
+
+            <div class="loginBottom">
+                <a href="javascript:;">
+                    <i class="iconfont icon-icon-dianjifangkuang"></i>快速注册
+                </a>
+                <a href="javascript:;">
+                    忘记密码？
+                </a>
+            </div>
+        </div>
+
+
+        <div class="weLogin">
+            <a href="javascript:;" class="weBox">
+                <i class="iconfont icon-weixin"></i>
+                <span>
+                使用微信登录
+                </span>
+            </a>
+        </div>
+
+    </div>
+
+
+
+
+    <script type='text/javascript' src='./js/jquery-1.9.1.min.js'></script>
+    <script type='text/javascript' src='./js/zepto.min.js'></script>
+    <script type='text/javascript' src='./js/rem.js'></script>
+    <script type='text/javascript' src='./js/Validform_v5.3.2_min.js'></script>
+    <script type="text/javascript">
+
+        $(function(){
+            $(".loginFrom").Validform({
+
+            });
+
+        });
+    </script>
+
+
+</body>
+</html>
