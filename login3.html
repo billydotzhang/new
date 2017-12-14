@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <title>验证码登录</title>
+    <title>注册</title>
     <link href="./css/login.css" rel="stylesheet" />
     <link href="//at.alicdn.com/t/font_506966_fd2t2mer3nixusor.css" rel="stylesheet">
 </head>
@@ -13,7 +13,7 @@
             <i class="iconfont icon-zuojian"></i>
         </a>
         <div class="navMid">
-            <span>登录</span>
+            <span>注册</span>
         </div>
         <a class="navRt">
         </a>
@@ -21,46 +21,37 @@
 
     <div class="loginBox">
         <div class="layer2rm"></div>
-        <div class="loginTab">
-            <div class="defTab ">
-                <a href="javascript:;">密码登录</a>
-            </div>
-            <div class="defTab tabAct">
-                <a href="javascript:;">验证码登录</a>
-            </div>
+
+        <div class="loginInTitle">
+            <i>*</i>请填写以下信息完成注册<i>*</i>
         </div>
 
-        <form class="loginFrom">
+        <form class="loginFrom loginInFrom">
 
             <div class="fromInput ">
                 <input type="text" datatype="m" errormsg="请输入正确手机号" nullmsg="请输入手机号" placeholder="请输入手机号">
             </div>
 
-            <div class="fromInput inputAddBtn">
-                <input type="text" datatype="n4-4" errormsg="请输入正确验证码" nullmsg="验证码不能为空" placeholder="请输入验证码"> <span>获取验证码</span>
+            <div class="fromInput ">
+                <input type="password" name="pwd" datatype="*8-16" errormsg="密码格式不正确" nullmsg="请输入密码" placeholder="请设置8-16位数字+字母组合密码">
             </div>
 
-            <input type="submit" class="loginBtn" value="登录">
+            <div class="fromInput ">
+                <input type="password" datatype="*8-16" recheck="pwd" errormsg="两次密码不一致" nullmsg="请输入确认密码" placeholder="请再次确认密码">
+            </div>
 
-            <div class="loginBottom">
+            <div class="fromInput inputAddBtn">
+                <input type="text" datatype="n4-4" errormsg="请输入正确验证码" nullmsg="验证码不能为空" placeholder="请输入短信验证码"> <span>获取验证码</span>
+            </div>
+
+            <input type="submit" class="loginBtn" value="确认注册">
+
+            <div class="loginInBottom">
                 <a href="javascript:;">
-                    <i class="iconfont icon-icon-dianjifangkuang"></i>快速注册
-                </a>
-                <a href="javascript:;">
-                    忘记密码？
+                    立即登录
                 </a>
             </div>
         </form>
-
-
-        <div class="weLogin">
-            <a href="javascript:;" class="weBox">
-                <i class="iconfont icon-weixin"></i>
-                <span>
-                使用微信登录
-                </span>
-            </a>
-        </div>
 
     </div>
 

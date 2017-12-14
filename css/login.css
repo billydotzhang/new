@@ -107,12 +107,29 @@ a {
 
 /* line 40, ../sass/mixin/_common.scss */
 .tips {
+  display: none;
   position: fixed;
-  background-color: #ff;
+  background-color: #000;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+  top: 40%;
+  left: 50%;
+  margin-left: -5rem;
+  padding: 1rem 2rem;
+  text-align: center;
+  border-radius: 0.3rem;
+}
+/* line 51, ../sass/mixin/_common.scss */
+.tips span {
+  display: inline-block;
+  width: 6rem;
+  color: #fff;
+  text-align: center;
+  font-size: 0.6rem;
 }
 
 /* line 4, ../sass/mixin/_nav.scss */
-.disFlexC, .navBox .navLt, .navBox .navMid, .navBox .navRt, .weLogin {
+.disFlexC, .navBox .navLt, .navBox .navMid, .navBox .navRt, .weLogin, .prompting {
   display: -webkit-flex;
   display: flex;
   -webkit-justify-content: center;
@@ -167,36 +184,55 @@ a {
 /* line 16, ../sass/login.scss */
 .loginTab .tabAct a {
   border-bottom: 3px solid #ff8f37;
+  font-size: 0.7rem;
 }
-/* line 20, ../sass/login.scss */
+/* line 21, ../sass/login.scss */
 .loginTab .defTab {
   width: 50%;
   padding: 1rem 1rem 0 1rem;
   text-align: center;
 }
-/* line 24, ../sass/login.scss */
+/* line 25, ../sass/login.scss */
 .loginTab .defTab a {
   display: inline-block;
   line-height: 1.2rem;
   text-align: center;
 }
 
-/* line 31, ../sass/login.scss */
+/* line 32, ../sass/login.scss */
+.loginInFrom {
+  padding: 0 .8rem !important;
+}
+
+/* line 35, ../sass/login.scss */
 .loginFrom {
   padding: 2rem .8rem;
 }
 
-/* line 35, ../sass/login.scss */
+/* line 38, ../sass/login.scss */
+.loginInTitle {
+  color: #ff8f37;
+  text-align: center;
+  line-height: 3rem;
+}
+/* line 42, ../sass/login.scss */
+.loginInTitle i {
+  font-size: 0.5rem;
+  font-family: PingFang-SC;
+  margin: 0 0.2rem;
+}
+
+/* line 49, ../sass/login.scss */
 .fromInAct input {
   border: 1px solid #ff8f37 !important;
 }
 
-/* line 39, ../sass/login.scss */
+/* line 53, ../sass/login.scss */
 .fromInput {
   padding: 0.3rem 0;
   width: 100%;
 }
-/* line 42, ../sass/login.scss */
+/* line 56, ../sass/login.scss */
 .fromInput input {
   width: 95%;
   border: 1px solid #e6e6e6;
@@ -207,7 +243,26 @@ a {
   font-style: oblique;
 }
 
-/* line 52, ../sass/login.scss */
+/* line 66, ../sass/login.scss */
+.inputAddBtn {
+  display: -webkit-flex;
+  display: flex;
+}
+/* line 68, ../sass/login.scss */
+.inputAddBtn span {
+  display: inline-block;
+  border: 1px solid #ff8f37;
+  color: #ff8f37;
+  background-color: #fff;
+  margin-left: 0.5rem;
+  width: 70%;
+  border-radius: 0.2rem;
+  text-align: center;
+  line-height: 2rem;
+  font-size: 0.6rem;
+}
+
+/* line 82, ../sass/login.scss */
 .loginBtn {
   margin-top: 1.7rem;
   width: 100%;
@@ -220,7 +275,21 @@ a {
   font-weight: 300;
 }
 
-/* line 63, ../sass/login.scss */
+/* line 93, ../sass/login.scss */
+.loginInBottom {
+  margin-top: 1rem;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+/* line 97, ../sass/login.scss */
+.loginInBottom a {
+  color: #8f8f8f;
+  text-decoration: underline;
+}
+
+/* line 102, ../sass/login.scss */
 .loginBottom {
   margin-top: 1rem;
   display: -webkit-flex;
@@ -228,32 +297,100 @@ a {
   -webkit-justify-content: space-between;
   justify-content: space-between;
 }
-/* line 67, ../sass/login.scss */
+/* line 106, ../sass/login.scss */
 .loginBottom a {
   color: #8f8f8f;
 }
-/* line 69, ../sass/login.scss */
+/* line 108, ../sass/login.scss */
 .loginBottom a:last-child {
   text-decoration: underline;
 }
-
-/* line 75, ../sass/login.scss */
-.weLogin {
-  padding-top: 2rem;
+/* line 111, ../sass/login.scss */
+.loginBottom a i {
+  font-size: 0.7rem;
 }
-/* line 78, ../sass/login.scss */
+
+/* line 117, ../sass/login.scss */
+.weLogin {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  margin-left: -2.5rem;
+  width: 5rem;
+}
+/* line 124, ../sass/login.scss */
 .weLogin .weBox {
   text-align: center;
 }
-/* line 80, ../sass/login.scss */
+/* line 126, ../sass/login.scss */
 .weLogin .weBox i {
   font-size: 2rem;
   color: #09bb07;
 }
-/* line 84, ../sass/login.scss */
+/* line 130, ../sass/login.scss */
 .weLogin .weBox span {
   display: block;
   color: #8f8f8f;
   padding-top: 0.3rem;
-  font-size: 0.2rem;
+  font-size: 0.5rem;
+}
+
+/* line 139, ../sass/login.scss */
+.prompting {
+  padding-top: 7rem;
+}
+/* line 142, ../sass/login.scss */
+.prompting .promptImg {
+  position: relative;
+  width: 6rem;
+  height: 7rem;
+}
+/* line 146, ../sass/login.scss */
+.prompting .promptImg span {
+  width: 6rem;
+  position: absolute;
+  display: block;
+  margin: auto;
+  bottom: 0;
+  text-align: center;
+  color: #292929;
+}
+/* line 156, ../sass/login.scss */
+.prompting .loginInSuces {
+  background: url("../images/loginInSuces.png") no-repeat;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+}
+/* line 160, ../sass/login.scss */
+.prompting .reSetSuces {
+  background: url("../images/reSetSuces.png") no-repeat;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+}
+/* line 164, ../sass/login.scss */
+.prompting .upSuces {
+  background: url("../images/upSuces.png") no-repeat;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+}
+/* line 168, ../sass/login.scss */
+.prompting .setSuces {
+  background: url("../images/setSuces.png") no-repeat;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+}
+
+/* line 173, ../sass/login.scss */
+.promptBottom {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }

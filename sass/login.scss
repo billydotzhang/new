@@ -15,6 +15,7 @@
   .tabAct{
     a{
       border-bottom: 3px solid $mainCr;
+      font-size: $defFSze;
     }
   }
   .defTab{
@@ -28,8 +29,21 @@
     }
   }
 }
+.loginInFrom{
+  padding:0 .8rem !important;
+}
 .loginFrom{
   padding: 2rem .8rem;
+}
+.loginInTitle{
+  color: $mainCr;
+  text-align: center;
+  line-height: 3rem;
+  i{
+    font-size: 0.5rem;
+    font-family: PingFang-SC;
+    margin: 0 0.2rem;
+  }
 }
 .fromInAct{
   input{
@@ -49,6 +63,22 @@
     font-style: oblique;
   }
 }
+.inputAddBtn{
+  @include display-flex;
+  span{
+    display: inline-block;
+    border: 1px solid $mainCr;
+    color: $mainCr;
+    background-color: $defCrFF;
+    margin-left: 0.5rem;
+    width: 70%;
+    border-radius: $bdRadius;
+    text-align: center;
+    line-height: 2rem;
+    font-size: $defFSze - 0.1rem;
+  }
+}
+
 .loginBtn{
   margin-top: 1.7rem;
   width: 100%;
@@ -60,6 +90,15 @@
   font-size: $defFSze + 0.2rem;
   font-weight: 300;
 }
+.loginInBottom{
+  margin-top: 1rem;
+  @include display-flex;
+  @include justify-content(center);
+  a {
+    color: $fontCr8f;
+    text-decoration:underline;
+  }
+}
 .loginBottom{
   margin-top: 1rem;
   @include display-flex;
@@ -69,11 +108,18 @@
     &:last-child{
       text-decoration:underline;
     }
+    i{
+      font-size: $defFSze;
+    }
   }
 }
 
 .weLogin{
-  padding-top: 2rem;
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  margin-left: -2.5rem;
+  width: 5rem;
   @extend .disFlexC;
   .weBox{
     text-align: center;
@@ -85,7 +131,47 @@
       display: block;
       color: $fontCr8f;
       padding-top: 0.3rem;
-      font-size: 0.2rem;
+      font-size: $defFSze - 0.2rem;
     }
   }
+}
+
+.prompting{
+  padding-top: 7rem;
+  @extend .disFlexC;
+  .promptImg{
+    position: relative;
+    width: 6rem;
+    height: 7rem;
+    span{
+      width: 6rem;
+      position: absolute;
+      display: block;
+      margin: auto;
+      bottom: 0;
+      text-align: center;
+      color: $defCr29;
+    }
+  }
+  .loginInSuces{
+    background: url('../images/loginInSuces.png') no-repeat;
+    @include background-size(100%);
+  }
+  .reSetSuces{
+    background: url('../images/reSetSuces.png') no-repeat;
+    @include background-size(100%);
+  }
+  .upSuces{
+    background: url('../images/upSuces.png') no-repeat;
+    @include background-size(100%);
+  }
+  .setSuces{
+    background: url('../images/setSuces.png') no-repeat;
+    @include background-size(100%);
+  }
+}
+.promptBottom{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }

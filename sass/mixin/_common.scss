@@ -38,6 +38,21 @@ a{
 }
 
 .tips{
+  display: none;
   position: fixed;
-  background-color: #ff;
+  background-color: #000;
+  @include opacity(0.5);
+  top: 40%;
+  left: 50%;
+  margin-left: -5rem;
+  padding: 1rem 2rem;
+  text-align: center;
+  border-radius: 0.3rem;
+  span{
+    display: inline-block;
+    width: 6rem;
+    color: #fff;
+    text-align: center;
+    font-size: $defFSze - 0.1rem;
+  }
 }
